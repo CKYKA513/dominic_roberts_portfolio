@@ -7,7 +7,7 @@
 }
 
 @font-face {
-  src: url("/assets/typo/UbuntuMono-Regular.ttf") format("ttf");
+  src: url("/assets/typo/UbuntuMono-Regular.ttf") format("truetype");
   font-family: "Ubuntu";
 }
 * {
@@ -84,7 +84,7 @@ main {
 }
 .portfolio .autoportrait .content {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 5px;
 }
 .portfolio .autoportrait .content img {
@@ -96,21 +96,12 @@ main {
   display: flex;
 }
 .portfolio .sonore .playBtn {
+  width: 80%;
   display: block;
 }
 .portfolio .sonore .stopBtn {
+  width: 80%;
   display: none;
-}
-
-.btn {
-  color: var(--blanc);
-  width: 100%;
-  padding: 5%;
-  background-color: var(--noir);
-}
-
-.btn:hover {
-  background-color: var(--rouge);
 }
 
 h2 {
@@ -119,6 +110,20 @@ h2 {
 
 footer {
   width: 100%;
-  height: 15vh;
+  height: 15%;
   background-color: var(--noir);
+}
+
+@media screen and (min-width: 500px) {
+  .portfolio .autoportrait .content {
+    grid-template-columns: 1fr 1fr;
+  }
+  .portfolio .sonore .playBtn, .portfolio .sonore .stopBtn {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 900px) {
+  .portfolio .autoportrait .content {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }/*# sourceMappingURL=style.css.map */
