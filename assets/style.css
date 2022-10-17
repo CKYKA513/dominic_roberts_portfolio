@@ -6,6 +6,10 @@
   --violet: #4d4a5a;
 }
 
+@font-face {
+  src: url("/assets/typo/UbuntuMono-Regular.ttf") format("ttf");
+  font-family: "Ubuntu";
+}
 * {
   box-sizing: border-box;
   font-family: "Ubuntu";
