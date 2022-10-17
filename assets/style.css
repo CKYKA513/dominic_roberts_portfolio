@@ -22,59 +22,12 @@ header {
   height: 60px;
   color: var(--blanc);
   display: flex;
-  flex-flow: column;
+  justify-content: flex-end;
+}
+header .nom {
+  margin: 2px 5% 0 0;
 }
 
-.menu_wrap {
-  align-self: flex-end;
-  display: block;
-  right: 0px;
-}
-
-.menu_list {
-  list-style: none;
-  display: flex;
-  width: 60vw;
-  justify-content: space-around;
-}
-
-.menu {
-  width: 33%;
-  height: 40px;
-  padding: 5px;
-  text-align: center;
-}
-
-.menu_mouse_on {
-  background-color: var(--rouge);
-  -webkit-animation-name: menuAnimation;
-          animation-name: menuAnimation;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-timing-function: ease-out;
-          animation-timing-function: ease-out;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  border-radius: 20px;
-}
-
-@-webkit-keyframes menuAnimation {
-  from {
-    opacity: 0%;
-  }
-  to {
-    opacity: 100%;
-  }
-}
-
-@keyframes menuAnimation {
-  from {
-    opacity: 0%;
-  }
-  to {
-    opacity: 100%;
-  }
-}
 main {
   width: 100%;
   color: var(--blanc);

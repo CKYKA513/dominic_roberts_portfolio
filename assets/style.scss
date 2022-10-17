@@ -22,41 +22,10 @@ header {
     height: 60px;
     color: var(--blanc);
     display: flex;
-    flex-flow: column;
-}
-
-.menu_wrap {
-    align-self: flex-end;
-    display: block;
-    right: 0px;
-} 
-
-.menu_list {
-    list-style: none;
-    display: flex;
-    width: 60vw;
-    justify-content: space-around;
-}
-
-.menu {
-    width: 33%;
-    height: 40px;
-    padding: 5px;
-    text-align: center;
-}
-
-.menu_mouse_on {
-    background-color: var(--rouge);
-    animation-name: menuAnimation;
-    animation-duration: 1s;
-    animation-timing-function: ease-out;
-    animation-iteration-count: 1;
-    border-radius: 20px;
-}
-
-@keyframes menuAnimation {
-    from { opacity: 0% }
-    to { opacity: 100% }
+    justify-content: flex-end;
+    .nom {
+        margin: 2px 5% 0 0;
+    }
 }
 
 main {
