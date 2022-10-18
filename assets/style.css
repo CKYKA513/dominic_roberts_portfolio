@@ -38,6 +38,7 @@ main {
   background-color: var(--noir);
   display: flex;
   flex-flow: column;
+  font-size: 16px;
 }
 
 .portfolio {
@@ -95,13 +96,28 @@ main {
   width: 100%;
   display: flex;
 }
-.portfolio .sonore .playBtn {
-  width: 80%;
+.portfolio .sonore .sonore {
+  width: 100%;
+  display: flex;
+}
+.portfolio .sonore .sonore .playBtn {
   display: block;
 }
-.portfolio .sonore .stopBtn {
-  width: 80%;
+.portfolio .sonore .sonore .stopBtn {
   display: none;
+}
+.portfolio .sonore .playBtn {
+  width: 100%;
+  display: block;
+  overflow: hi img;
+  overflow-width: 100%;
+}
+.portfolio .sonore .stopBtn {
+  width: 100%;
+  display: none;
+}
+.portfolio .sonore .stopBtn img {
+  width: 100%;
 }
 
 h2 {
@@ -123,6 +139,9 @@ footer {
   }
 }
 @media screen and (min-width: 900px) {
+  .portfolio {
+    font-size: 24px;
+  }
   .portfolio .autoportrait .content {
     grid-template-columns: 1fr 1fr 1fr;
   }
