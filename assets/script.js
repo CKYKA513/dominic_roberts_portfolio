@@ -1,41 +1,3 @@
-// videos
-
-let videos = document.querySelectorAll('video');
-let videoIl = document.querySelector('.video_il')
-let videoManiac = document.querySelector('.video_maniac')
-let progres1 = document.querySelector('.progres1');
-let barre1 = document.querySelector('.barre1');
-let progres2 = document.querySelector('.progres2')
-let barre2 = document.querySelector('.barre2')
-
-videos.forEach(video => {
-  video.addEventListener("click", () => {
-    if (video.paused == false) {
-      video.pause()
-    } else {
-      video.play()
-    }
-  })
-  if (video.currentTime == video.duration) {
-    video.currentTime = 0
-    video.pause()
-  }
-})
-
-videoIl.addEventListener('timeupdate', function() {
-  let ratio = videoIl.currentTime/videoIl.duration;
-  console.log(ratio);
-  barre1.style.transform = `scaleX(${ratio})`;
-  
-})
-
-videoManiac.addEventListener('timeupdate', function() {
-  let ratio = videoManiac.currentTime/videoManiac.duration;
-  console.log(ratio);
-  barre2.style.transform = `scaleX(${ratio})`;
-  
-})
-
 // sonore
 
 let playBtn1 = document.querySelector('.playBtn1')
@@ -44,9 +6,6 @@ let playBtn2 = document.querySelector('.playBtn2')
 let stopBtn2 = document.querySelector('.stopBtn2')
 let montage = document.querySelector('.montage_audio')
 let tempsReel = document.querySelector('.tempsreel_audio')
-
-stopBtn1.style.display = "none"
-stopBtn2.style.display = "none"
 
 playBtn1.addEventListener("click", () => {
   montage.play()
