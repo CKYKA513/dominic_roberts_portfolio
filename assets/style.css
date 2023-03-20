@@ -10,10 +10,8 @@
   src: url("/assets/typo/UbuntuMono-Regular.woff2") format("woff2");
   font-family: "Ubuntu";
 }
-
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   font-family: Ubuntu, Bahnschrift;
   font-size: 1.5vw;
 }
@@ -26,16 +24,11 @@ body {
 header {
   background-color: var(--noir);
   width: 100%;
-  padding-bottom: 200px;
+  padding-bottom: 10%;
   color: var(--blanc);
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  justify-content: flex-end;
 }
-
 header .nom {
   margin: 1vh 5% 0 0;
   font-size: 5vw;
@@ -45,137 +38,96 @@ main {
   width: 100%;
   color: var(--blanc);
   background-color: var(--noir);
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column;
-          flex-flow: column;
+  flex-flow: column;
   font-size: 16px;
 }
-
 main h2 {
   font-size: 3vw;
 }
-
 main .moi {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column;
-          flex-flow: column;
+  flex-flow: row;
   text-align: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   padding: 3% 5%;
 }
-
-main .moi .description {
+main .moi .a_propos {
+  width: 50%;
+  display: flex;
+  flex-flow: column;
+}
+main .moi .a_propos .description {
   width: 80%;
 }
-
+main .moi .photo {
+  width: 50%;
+}
+main .moi .photo img {
+  width: 80%;
+  border-radius: 50%;
+}
 main .portfolio {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
   padding: 3% 5%;
 }
-
 main .portfolio div {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column;
-          flex-flow: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: column;
+  align-items: center;
   text-align: center;
   width: 100%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   /* opacity: 100%; */
   margin: 5% 0;
 }
-
 main .portfolio div .embedVid {
   width: 100%;
   aspect-ratio: 16/9;
   margin: 0px;
 }
-
 main .portfolio div .embedVid iframe {
   width: 100%;
   aspect-ratio: 16/9;
 }
-
 main .portfolio div .description {
   width: 80%;
 }
-
 main .portfolio .autoportrait {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column;
-          flex-flow: column;
+  flex-flow: column;
 }
-
 main .portfolio .autoportrait .content {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
+  grid-template-columns: 1fr;
   gap: 5px;
   margin-bottom: 0px;
 }
-
 main .portfolio .autoportrait .content img {
   width: 100%;
   border-radius: 20px;
 }
-
 main .portfolio .sonore {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 main .portfolio .sonore .playBtn1, main .portfolio .sonore .playBtn2 {
   width: 50vw;
   display: block;
   overflow: hidden;
 }
-
 main .portfolio .sonore .playBtn1 img, main .portfolio .sonore .playBtn2 img {
   width: 100%;
 }
-
 main .portfolio .sonore .stopBtn1, main .portfolio .sonore .stopBtn2 {
   width: 50vw;
   display: none;
 }
-
 main .portfolio .sonore .stopBtn1 img, main .portfolio .sonore .stopBtn2 img {
   width: 100%;
 }
@@ -192,24 +144,13 @@ footer {
   color: var(--blanc);
   padding-bottom: 50px;
 }
-
 footer .content {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column;
-          flex-flow: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 50px;
 }
-
 footer .content a {
   text-decoration: none;
   color: var(--blanc);
@@ -217,21 +158,17 @@ footer .content a {
 
 @media screen and (min-width: 500px) {
   main .portfolio .autoportrait .content {
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
   main .portfolio .sonore .playBtn, main .portfolio .sonore .stopBtn {
     width: 100%;
   }
 }
-
 @media screen and (min-width: 900px) {
   main .portfolio {
     font-size: 24px;
   }
   main .portfolio .autoportrait .content {
-    -ms-grid-columns: 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
