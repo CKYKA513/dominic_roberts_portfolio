@@ -22,16 +22,19 @@ body {
 }
 
 header {
+  display: block;
+  position: sticky;
   background-color: var(--noir);
   width: 100%;
   padding-bottom: 10%;
   color: var(--blanc);
-  display: flex;
-  justify-content: flex-end;
 }
 header .nom {
+  position: relative;
+  left: 50vw;
   margin: 1vh 5% 0 0;
   font-size: 5vw;
+  margin-top: 0px;
 }
 
 main {
@@ -48,9 +51,14 @@ main h2 {
 main .moi {
   display: flex;
   flex-flow: row;
+  justify-content: flex-start;
   text-align: center;
   align-items: center;
   padding: 3% 5%;
+  background-image: url("img/dominic.jpg");
+  background-repeat: no-repeat;
+  background-position: center-25%;
+  background-size: 100%;
 }
 main .moi .a_propos {
   width: 50%;
@@ -59,13 +67,6 @@ main .moi .a_propos {
 }
 main .moi .a_propos .description {
   width: 80%;
-}
-main .moi .photo {
-  width: 50%;
-}
-main .moi .photo img {
-  width: 80%;
-  border-radius: 50%;
 }
 main .portfolio {
   width: 100%;
