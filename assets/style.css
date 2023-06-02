@@ -23,11 +23,13 @@ body {
 
 header {
   display: block;
-  position: sticky;
+  position: fixed;
   background-color: var(--noir);
   width: 100%;
-  padding-bottom: 10%;
+  padding-bottom: 3%;
+  padding-top: 1.5%;
   color: var(--blanc);
+  z-index: 2;
 }
 header .nom {
   position: relative;
@@ -38,6 +40,12 @@ header .nom {
 }
 
 main {
+  display: block;
+  position: relative;
+  top: 9vw;
+  z-index: 1;
+}
+main .content {
   width: 100%;
   color: var(--blanc);
   background-color: var(--noir);
@@ -45,28 +53,30 @@ main {
   flex-flow: column;
   font-size: 16px;
 }
-main h2 {
+main .content h2 {
   font-size: 3vw;
 }
-main .moi {
+main .content .moi {
+  display: block;
+  overflow: hidden;
+}
+main .content .moi .degrade {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(rgba(31, 28, 28, 0.5), rgb(31, 28, 28));
+  z-index: 0;
+}
+main .content .moi .a_propos {
+  width: 100%;
   display: flex;
-  flex-flow: row;
-  justify-content: flex-start;
-  text-align: center;
-  align-items: center;
-  padding: 3% 5%;
+  flex-flow: column;
   background-image: url("img/dominic.jpg");
   background-repeat: no-repeat;
   background-position: center-25%;
   background-size: 100%;
-}
-main .moi .a_propos {
-  width: 50%;
-  display: flex;
-  flex-flow: column;
-}
-main .moi .a_propos .description {
-  width: 80%;
+  padding: 3% 5%;
+  z-index: 5;
 }
 main .portfolio {
   width: 100%;
