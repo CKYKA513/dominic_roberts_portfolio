@@ -13,7 +13,6 @@
 
 * {
     box-sizing: border-box;
-    // font-family: 'Bahnschrift';
     font-family: Ubuntu, Bahnschrift;
     font-size: 1.5vw;
 }
@@ -62,11 +61,6 @@ main {
         font-size: 16px;
         .moi {
             display: block;
-            // display: flex;
-            // flex-flow: row;
-            // justify-content: flex-start;
-            // text-align: center;
-            // align-items: center;
             overflow: hidden;
             .degrade {
                 position: absolute;
