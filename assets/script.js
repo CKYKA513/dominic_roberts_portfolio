@@ -43,44 +43,18 @@ if (tempsReel.currentTime == tempsReel.duration) {
   playBtn2.style.display = "block"
 }
 
-// slider
+// Header
 
-// let btnRight = document.querySelector('.droite')
-// let btnLeft = document.querySelector('.gauche')
-// let img = document.querySelector('.img')
-// let i = 1;
-// img.getElementsByClassName.backgroundImage = "url('img/autoportrait_01.jpg')"
+window.addEventListener("scroll", () => {
+  let header = document.querySelector(".header")
+  let scrollTop = window.pageYOffset || document.documentElement.scrollTop
+  let nom = document.querySelector(".nom")
 
-// btnLeft.addEventListener("click", () => {
-//   i--
-//   if (i < 1) {
-//     i = 6
-//   }
-//   img.innerHTML = `<img src="assets/img/autoportrait_0${i}.jpg" alt="autoportrait_0${i}">`
-//   console.log(i)
-//   console.log(img.innerHTML)
-// })
-
-// btnRight.addEventListener("click", () => {
-//   i++
-//   if (i > 6) {
-//     i = 1
-//   }
-//   img.innerHTML = `<img src="assets/img/autoportrait_0${i}.jpg" alt="autoportrait_0${i}">`
-//   console.log(i)
-//   console.log(img.innerHTML)
-// })
-
-
-
-
-// const swiper = new Swiper('.swiper', {
-//   // Optional parameters
-//   // direction: 'vertical',
-//   loop: true,
-//   // Navigation arrows
-//   navigation: {
-//     nextEl: '.swiper-button-next',
-//     prevEl: '.swiper-button-prev',
-//   },
-// });
+  if (scrollTop > 0) {
+    header.style.height = '5%'
+    nom.style.fontSize = '2vw'
+  } else {
+    header.style.height = '20%'
+    nom.style.fontSize = '5vw'
+  }
+})

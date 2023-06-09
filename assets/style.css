@@ -19,6 +19,7 @@
 body {
   width: 100%;
   margin: 0px;
+  background-color: var(--noir);
 }
 
 header {
@@ -30,6 +31,7 @@ header {
   padding-top: 1.5%;
   color: var(--blanc);
   z-index: 2;
+  transition: height 0.3s ease;
 }
 header .nom {
   position: relative;
@@ -37,6 +39,7 @@ header .nom {
   margin: 1vh 5% 0 0;
   font-size: 5vw;
   margin-top: 0px;
+  transition: font-size 0.3s ease;
 }
 
 main {
@@ -148,12 +151,15 @@ h2 {
 }
 
 footer {
+  display: block;
   width: 100%;
   height: 100%;
   background-color: var(--noir);
   overflow: hidden;
   color: var(--blanc);
   padding-bottom: 50px;
+  position: relative;
+  z-index: 2;
 }
 footer .content {
   display: flex;
@@ -168,18 +174,18 @@ footer .content a {
 }
 
 @media screen and (min-width: 500px) {
-  main .portfolio .autoportrait .content {
+  main .content .portfolio .autoportrait .content {
     grid-template-columns: 1fr 1fr;
   }
-  main .portfolio .sonore .playBtn, main .portfolio .sonore .stopBtn {
+  main .content .portfolio .sonore .playBtn, main .content .portfolio .sonore .stopBtn {
     width: 100%;
   }
 }
 @media screen and (min-width: 900px) {
-  main .portfolio {
+  main .content .portfolio {
     font-size: 24px;
   }
-  main .portfolio .autoportrait .content {
+  main .content .portfolio .autoportrait .content {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }/*# sourceMappingURL=style.css.map */
