@@ -1,4 +1,5 @@
 :root {
+  --deepNoir: #000;
   --noir: #1f1c1c;
   --blanc: #e8ecf1;
   --rouge: #7d0f1f;
@@ -32,6 +33,19 @@ header {
   color: var(--blanc);
   z-index: 2;
   transition: height 0.3s ease;
+  box-shadow: 0px 1px 20px var(--deepNoir);
+}
+header .menu {
+  width: 50%;
+  position: absolute;
+}
+header .menu .flexContainer {
+  display: flex;
+  justify-content: space-evenly;
+}
+header a {
+  text-decoration: none;
+  color: var(--blanc);
 }
 header .nom {
   position: relative;

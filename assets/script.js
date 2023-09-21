@@ -49,12 +49,35 @@ window.addEventListener("scroll", () => {
   let header = document.querySelector(".header")
   let scrollTop = window.pageYOffset || document.documentElement.scrollTop
   let nom = document.querySelector(".nom")
+  let windowWidth = window.innerWidth;
+  let menu = document.querySelector(".menu")
 
-  if (scrollTop > 0) {
-    header.style.height = '5%'
-    nom.style.fontSize = '2vw'
-  } else {
-    header.style.height = '20%'
-    nom.style.fontSize = '5vw'
+  if (windowWidth >= 1500) {
+    if (scrollTop > 0) {
+      header.style.height = '5%'
+      nom.style.fontSize = '2vw'
+    } else {
+      header.style.height = '20%'
+      nom.style.fontSize = '5vw'
+      // menu.style.transform = "translateY(50px)" 
+    }
+  } else if (windowWidth >= 1200) {
+    if (scrollTop > 0) {
+      header.style.height = '5%'
+      nom.style.fontSize = '2vw'
+    } else {
+      header.style.height = '7%'
+      nom.style.fontSize = '5vw'
+    }
+  } else if (windowWidth >= 900) {
+    if (scrollTop > 0) {
+      header.style.height = '5%'
+      nom.style.fontSize = '2vw'
+    } else {
+      header.style.height = '4%'
+      nom.style.fontSize = '5vw'
+    }
   }
+  
 })
+
