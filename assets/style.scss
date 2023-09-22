@@ -37,11 +37,47 @@ header {
     box-shadow: 0px 1px 20px var(--deepNoir);
     //height: 20%;
     .menu {
-        width: 50%;
         position: absolute;
-        .flexContainer {
+        width: 50%;
+        .menuFlexContainer {
             display: flex;
             justify-content: space-evenly;
+            .projets {
+                .dropBtnProjet {
+                    cursor: pointer;
+                }
+                .dropContent {
+                    display: none;
+                    position: absolute;
+                    background-color: var(--noir);
+                    min-width: 160px;
+                    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                    z-index: 1;
+
+                }
+                .dropContent a {
+                    color: var(--blanc);
+                    padding: 12px 16px;
+                    text-decoration: none;
+                    display: block;
+                    
+                }
+                .dropContent a:hover {
+                    color: var(--violet);
+                }
+                .dropBtnProjet:hover {
+                    color: var(--violet);
+                }
+            }
+            .contact {
+                a {
+                    text-decoration: none;
+                    color: var(--blanc);
+                }
+                a:hover {
+                    color: var(--violet);
+                }
+            }
         }
     }
     a {
@@ -55,6 +91,9 @@ header {
         font-size: 5vw;
         margin-top: 0px;
         transition: font-size 0.3s ease;
+    }
+    .nom:hover {
+        color: var(--violet);
     }
 }
 
@@ -203,6 +242,9 @@ footer {
         a {
             text-decoration: none;
             color: var(--blanc);
+        }
+        a:hover {
+            color: var(--violet);
         }
     }
    

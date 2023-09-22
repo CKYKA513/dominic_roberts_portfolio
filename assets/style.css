@@ -36,12 +36,42 @@ header {
   box-shadow: 0px 1px 20px var(--deepNoir);
 }
 header .menu {
-  width: 50%;
   position: absolute;
+  width: 50%;
 }
-header .menu .flexContainer {
+header .menu .menuFlexContainer {
   display: flex;
   justify-content: space-evenly;
+}
+header .menu .menuFlexContainer .projets .dropBtnProjet {
+  cursor: pointer;
+}
+header .menu .menuFlexContainer .projets .dropContent {
+  display: none;
+  position: absolute;
+  background-color: var(--noir);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+header .menu .menuFlexContainer .projets .dropContent a {
+  color: var(--blanc);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+header .menu .menuFlexContainer .projets .dropContent a:hover {
+  color: var(--violet);
+}
+header .menu .menuFlexContainer .projets .dropBtnProjet:hover {
+  color: var(--violet);
+}
+header .menu .menuFlexContainer .contact a {
+  text-decoration: none;
+  color: var(--blanc);
+}
+header .menu .menuFlexContainer .contact a:hover {
+  color: var(--violet);
 }
 header a {
   text-decoration: none;
@@ -54,6 +84,9 @@ header .nom {
   font-size: 5vw;
   margin-top: 0px;
   transition: font-size 0.3s ease;
+}
+header .nom:hover {
+  color: var(--violet);
 }
 
 main {
@@ -185,6 +218,9 @@ footer .content {
 footer .content a {
   text-decoration: none;
   color: var(--blanc);
+}
+footer .content a:hover {
+  color: var(--violet);
 }
 
 @media screen and (min-width: 500px) {
