@@ -199,6 +199,12 @@ main .portfolio div .embedVid iframe {
 main .portfolio div .description {
   width: 80%;
 }
+main .portfolio div .description a {
+  color: var(--blanc);
+}
+main .portfolio div .description a:hover {
+  color: var(--violet);
+}
 main .portfolio .autoportrait {
   width: 100%;
   display: flex;

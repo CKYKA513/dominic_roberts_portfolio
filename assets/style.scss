@@ -208,6 +208,12 @@ main {
             }
             .description {
                 width: 80%;
+                a {
+                    color: var(--blanc);
+                }
+                a:hover {
+                    color: var(--violet);
+                }
             }
         }
         
