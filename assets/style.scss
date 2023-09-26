@@ -133,7 +133,49 @@ main {
                 padding: 3% 5%; 
                 z-index: 5;
             }
-    }
+        }
+        .dernierProjet {
+            h3 {
+                text-transform: uppercase;
+                font-size: xx-large;
+            }
+            padding: 3% 5%;
+            .dernierProjetTitreFlexContainer {
+                display: flex;
+                justify-content: flex-end;
+                width: 100%;
+                text-align: right;
+            }
+            .dernierProjet--projet {
+                display: flex;
+                flex-flow: column;
+                align-items: center;
+                text-align: center;
+                width: 100%;
+                justify-content: center;
+                /* opacity: 100%; */
+                margin-bottom: 5%;
+                
+                .embedVid {
+                    width: 100%;
+                    aspect-ratio: 16/9;
+                    margin: 0px;
+                    iframe {
+                        width: 100%;
+                        aspect-ratio: 16/9;
+                    }
+                }
+                .description {
+                    width: 80%;
+                    a {
+                        color: var(--blanc);
+                    }
+                    a:hover {
+                        color: var(--violet);
+                    }
+                }
+            }
+        }
     
         
     }
@@ -233,6 +275,7 @@ footer {
     padding-bottom: 50px;
     position: relative;
     z-index: 2;
+    margin-top: 5%;
     .content {
         display: flex;
         flex-flow: column;
