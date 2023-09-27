@@ -1,5 +1,16 @@
 // Header
 
+window.addEventListener("load", () => {
+  let windowWidth = window.innerWidth;
+  let header = document.querySelector(".header")
+  let menu = document.querySelector('.menu')
+  let menuHamburger = document.querySelector('.menuHamburger')
+  if (windowWidth <= 900) {
+    menu.style.display = "none"
+    menuHamburger.style.display = "block"
+  }
+})
+
 window.addEventListener("scroll", () => {
     let header = document.querySelector(".header")
     let scrollTop = window.pageYOffset || document.documentElement.scrollTop
