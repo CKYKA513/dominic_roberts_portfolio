@@ -5,10 +5,7 @@ window.addEventListener("load", () => {
   let header = document.querySelector(".header")
   let menu = document.querySelector('.menu')
   let menuHamburger = document.querySelector('.menuHamburger')
-  if (windowWidth <= 900) {
-    menu.style.display = "none"
-    menuHamburger.style.display = "block"
-  }
+  
 })
 
 window.addEventListener("scroll", () => {
@@ -17,6 +14,18 @@ window.addEventListener("scroll", () => {
     let nom = document.querySelector(".nom")
     let windowWidth = window.innerWidth;
     let menu = document.querySelector(".menu")
+
+    if (windowWidth > 900) {
+      if (scrollTop > 0) {
+        header.style.height = '5%'
+        nom.style.fontSize = '2vw'
+      } else {
+        header.style.height = '20%'
+        nom.style.fontSize = '5vw'
+        // menu.style.transform = "translateY(50px)" 
+      }
+    }
+    
   
     if (windowWidth >= 1500) {
       if (scrollTop > 0) {
@@ -39,10 +48,10 @@ window.addEventListener("scroll", () => {
       if (scrollTop > 0) {
         header.style.height = '5%'
         nom.style.fontSize = '2vw'
-      } else {
-        header.style.height = '4%'
-        nom.style.fontSize = '5vw'
-      }
+       }  else {
+         header.style.height = '4%'
+         nom.style.fontSize = '5vw'
+       }
     }
     
   })

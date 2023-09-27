@@ -10,6 +10,7 @@
         <meta name="author" content="Dominic Roberts">
         <link rel="stylesheet" href="assets/style.css">
 </head>
+<script src="assets/script/windowWidthReactScript.js"></script>
 <body class="body">
     <header class="header">
         <div class="menu">
@@ -34,48 +35,36 @@
         <a href="index.html" class="accueilLink"><h1 class="nom">Dominic Roberts</h1></a>
         <div class="menuHamburger">
             <div class="menuToggle">
-                <!--
-                A fake / hidden checkbox is used as click reciever,
-                so you can use the :checked selector on it.
-                -->
                 <input type="checkbox" />
                 
-                <!--
-                Some spans to act as a hamburger.
-                
-                They are acting like a real hamburger,
-                not that McDonalds stuff.
-                -->
                 <span></span>
                 <span></span>
                 <span></span>
                 
-                <!--
-                Too bad the menu has to be inside of the button
-                but hey, it's pure CSS magic.
-                -->
-                <ul class="menu">
-                  <a href="#"><li>Home</li></a>
-                  <a href="#"><li>About</li></a>
-                  <a href="#"><li>Info</li></a>
-                  <a href="#"><li>Contact</li></a>
-                  <a href="https://erikterwan.com/" target="_blank"><li>Show me more</li></a>
+                <ul class="menuUl">
+                  <a href="index.html"><li>Dominic Roberts</li></a>
+                  <a href="installation.html"><li>installation</li></a>
+                  <a href="video.html"><li>vidéo</li></a>
+                  <a href="photo.html"><li>photographie</li></a>
+                  <a href="sonore.html"><li>audio</li></a>
+                  <a href="contact.html"><li>contact</li></a>
                 </ul>
               </div>
         </div>
     </header>
     <main>
-        <div class="contactContent">
-            <div class="titleFlexContainer">
+        <div class="content">
+            <div class="contact">
                 <h2 class="titre">Pour me contacter</h2>
-            </div>
-            <div class="container">
                 <div class="information">
                     Artiste multimédia passionné, je suis prêt à donner vie à vos projets créatifs, que ce soit en vidéo, installation interactive ou tout autre.
                 </br>
                     Pour me contacter, vous n'avez qu'à m'envoyer un <a href="mailto:d.robberts911@gmail.com">mail</a>, ou sur mes <a href="https://linktr.ee/DominicRoberts513" target="_blank">réseaux sociaux</a>. </br>
                     Au plaisir de travailler avec vous!
                 </div>
+            </div>
+            <!-- <div class="container">
+                
                 <!-- <form action="assets/script/traitement_formulaire.php" method="post">
                     <input name="name" placeholder="John Doe" class="name" required />
                     <input name="emailaddress" placeholder="e-mail" class="email" type="email" required />
@@ -83,7 +72,7 @@
                     <textarea rows="4" cols="50" name="subject" placeholder="message" class="message" required></textarea>
                     <input name="submit" class="btn" type="submit" value="Envoyer" />
                 </form> -->
-            </div>
+            </div> -->
         </div>
         
     </main>
@@ -96,5 +85,5 @@
     </footer>
 </body>
 <script src="assets/script/menuScript.js"></script>
-<script src="assets/script/windowWidthReactScript.js"></script>
+
 </html>

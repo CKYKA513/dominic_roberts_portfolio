@@ -15,7 +15,7 @@
 * {
     box-sizing: border-box;
     font-family: Ubuntu, Bahnschrift;
-    font-size: 1.5vw;
+    //font-size: 1.5vw;
 }
 
 body {
@@ -23,6 +23,7 @@ body {
     margin: 0px;
     background-color: var(--noir);
     min-height: 100vh;
+    font-size: 1.5vw;
 }
 
 header {
@@ -131,7 +132,7 @@ header {
         }
 
         .menuToggle a:hover {
-            color: tomato;
+            color: var(--violet);
         }
 
 
@@ -206,11 +207,15 @@ header {
             transform: rotate(-45deg) translate(0, -1px);
         }
 
+        .menuToggle input:checked ~ .menuUl {
+            box-shadow: 0px 1px 20px var(--deepNoir);
+        }
+
         /*
         * Make this absolute positioned
         * at the top left of the screen
         */
-        .menu {
+        .menuUl {
             position: absolute;
             width: 300px;
             margin: -100px 0 0 -50px;
@@ -228,7 +233,7 @@ header {
             transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
         }
 
-        .menu li {
+        .menuUl li {
             padding: 10px 0;
             font-size: 22px;
         }
@@ -256,7 +261,6 @@ main {
         background-color: var(--noir);
         display: flex;
         flex-flow: column;
-        font-size: 16px;
         .moi {
             display: block;
             overflow: hidden;
@@ -322,7 +326,9 @@ main {
             }
         }
     
-        
+        .contact {
+
+        }
     }
     .portfolio {
         width: 100%;
@@ -410,17 +416,27 @@ main {
     }
 
 
-    .contactContent {
+    .contact {
         padding: 5% 5%;
         color: var(--blanc);
         display: flex;
         flex-flow: column;
         align-items: center;
-        .titleFlexContainer {
-            text-align: center;
-            .titre {
-                margin: 0px;
-                font-size: 3vw;
+        text-align: center;
+        margin-bottom: 10;
+        .titre {
+            margin: 0px;
+            //font-size: 3vw;
+        }
+        .information {
+            width: 50%;
+            padding: 2% 2% 5% 2%;
+            color: var(--blanc);
+            a {
+                color: var(--blanc);
+            }
+            a:hover {
+                color: var(--violet);
             }
         }
         
@@ -429,17 +445,7 @@ main {
             
             height: 100%;
             width: 50%;
-            .information {
-                width: 100%;
-                padding: 2% 2% 5% 2%;
-                color: var(--blanc);
-                a {
-                    color: var(--blanc);
-                }
-                a:hover {
-                    color: var(--violet);
-                }
-            }
+            
             form {
                 display: flex;
                 flex-flow: column;
@@ -490,31 +496,28 @@ footer {
 
 
 @media screen and (max-width: 500px) {
-    * {
-        font-size: 5vw;
-    }
-
-    header {
-        .accueilLink {
-            display: none;
-        }
-        display: block;
-        position: fixed;
-        background-color: var(--noir);
-        width: 100%;
-        color: var(--blanc);
-        z-index: 2;
-        height: 0px;
-        box-shadow: none;
-        .menuHamburger {
-
-        }
-    }
-    
     main {
-
+        top: 0px;
         .content {
+            .moi {
+                margin-top: 15vw;
+                .a_propos {
+                    padding: 0 0;
+                    
+                    p {
+                        margin: 0px;
+                        padding: 3% 5%;
+                    }
+                }
+            }
+            h2 {
+                font-size: 7vw;
+            }
+            h3 {
+                font-size: 6vw;
+            }
             .portfolio {
+                margin-top: 15vw;
                 .autoportrait {
                     .content {
                         grid-template-columns: 1fr 1fr;
@@ -525,6 +528,12 @@ footer {
                         width: 100%;
                     }
                 }
+            } 
+            .contact {
+                margin-top: 15vw;
+                .information {
+                    width: 100%;
+                }
             }
         }
         
@@ -532,7 +541,30 @@ footer {
     
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (max-width: 900px) {
+    body {
+        font-size: 4vw;
+    }
+    header {
+        .accueilLink {
+            display: none;
+        }
+        display: block;
+        position: fixed;
+        background-color: var(--noir);
+        width: 100%;
+        color: var(--blanc);
+        z-index: 2;
+        height: 15vw;
+        box-shadow: none;
+        .menuHamburger {
+            display: block;
+            background-color: rgba(0, 0, 0, 0);
+        }
+        .menu {
+            display: none;
+        }
+    }
     main {
         .contactContent {
             .titleFlexContainer {
@@ -542,11 +574,29 @@ footer {
             }
         }
         .content {
+            .moi {
+                .a_propos {
+                    div {
+                        display: none;
+                    }
+                }
+            }
+            .dernierProjet {
+                .dernierProjet--projet {
+                    text-align: left;
+                    .description {
+                        width: 100%;
+                    }
+                }
+            }
             .portfolio {
-                font-size: 24px;
+                .description {
+                    width: 100%;
+                    text-align: left;
+                }
                 .autoportrait {
                     .content {
-                        grid-template-columns: 1fr 1fr 1fr;
+                        grid-template-columns: 1fr;
                     }
                 }
             }
