@@ -42,19 +42,3 @@ if (tempsReel.currentTime == tempsReel.duration) {
   stopBtn2.style.display = "none"
   playBtn2.style.display = "block"
 }
-
-// Header
-
-window.addEventListener("scroll", () => {
-  let header = document.querySelector(".header")
-  let scrollTop = window.pageYOffset || document.documentElement.scrollTop
-  let nom = document.querySelector(".nom")
-
-  if (scrollTop > 0) {
-    header.style.height = '5%'
-    nom.style.fontSize = '2vw'
-  } else {
-    header.style.height = '20%'
-    nom.style.fontSize = '5vw'
-  }
-})
