@@ -269,8 +269,11 @@ main .content .dernierProjet .dernierProjet--projet {
   /* opacity: 100%; */
   margin-bottom: 5%;
 }
+main .content .dernierProjet .dernierProjet--projet h3 {
+  font-size: 3vw;
+}
 main .content .dernierProjet .dernierProjet--projet .embedVid {
-  width: 100%;
+  width: 80%;
   aspect-ratio: 16/9;
   margin: 0px;
 }
@@ -306,7 +309,7 @@ main .portfolio div {
   margin: 5% 0;
 }
 main .portfolio div .embedVid {
-  width: 100%;
+  width: 80%;
   aspect-ratio: 16/9;
   margin: 0px;
 }
@@ -423,12 +426,62 @@ footer .content a:hover {
   color: var(--violet);
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 900px) {
+  body {
+    font-size: 4vw;
+  }
+  header {
+    display: block;
+    position: fixed;
+    background-color: var(--noir);
+    width: 100%;
+    color: var(--blanc);
+    z-index: 2;
+    height: 10vw;
+    box-shadow: none;
+  }
+  header .accueilLink {
+    display: none;
+  }
+  header .menuHamburger {
+    display: block;
+    background-color: rgba(0, 0, 0, 0);
+  }
+  header .menu {
+    display: none;
+  }
   main {
-    top: 0px;
+    top: 15vw;
+  }
+  main .contactContent .titleFlexContainer h2 {
+    font-size: 7vw;
+  }
+  main .content .moi .a_propos div {
+    display: none;
+  }
+  main .content .dernierProjet .dernierProjet--projet {
+    text-align: left;
+  }
+  main .content .dernierProjet .dernierProjet--projet .description {
+    width: 100%;
+  }
+  main .content .portfolio .description {
+    width: 100%;
+    text-align: left;
+  }
+  main .content .portfolio .autoportrait .content {
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (max-width: 500px) {
+  header {
+    height: 20vw;
+  }
+  main {
+    top: 20vw;
   }
   main .content .moi {
-    margin-top: 15vw;
+    margin-top: 0;
   }
   main .content .moi .a_propos {
     padding: 0 0;
@@ -457,49 +510,5 @@ footer .content a:hover {
   }
   main .content .contact .information {
     width: 100%;
-  }
-}
-@media screen and (max-width: 900px) {
-  body {
-    font-size: 4vw;
-  }
-  header {
-    display: block;
-    position: fixed;
-    background-color: var(--noir);
-    width: 100%;
-    color: var(--blanc);
-    z-index: 2;
-    height: 15vw;
-    box-shadow: none;
-  }
-  header .accueilLink {
-    display: none;
-  }
-  header .menuHamburger {
-    display: block;
-    background-color: rgba(0, 0, 0, 0);
-  }
-  header .menu {
-    display: none;
-  }
-  main .contactContent .titleFlexContainer h2 {
-    font-size: 7vw;
-  }
-  main .content .moi .a_propos div {
-    display: none;
-  }
-  main .content .dernierProjet .dernierProjet--projet {
-    text-align: left;
-  }
-  main .content .dernierProjet .dernierProjet--projet .description {
-    width: 100%;
-  }
-  main .content .portfolio .description {
-    width: 100%;
-    text-align: left;
-  }
-  main .content .portfolio .autoportrait .content {
-    grid-template-columns: 1fr;
   }
 }/*# sourceMappingURL=style.css.map */

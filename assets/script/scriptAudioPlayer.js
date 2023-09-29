@@ -42,6 +42,3 @@ if (tempsReel.currentTime == tempsReel.duration) {
   stopBtn2.style.display = "none"
   playBtn2.style.display = "block"
 }
-
-
-

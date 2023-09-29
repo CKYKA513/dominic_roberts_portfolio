@@ -41,18 +41,18 @@ window.addEventListener("scroll", () => {
         header.style.height = '5%'
         nom.style.fontSize = '2vw'
       } else {
-        header.style.height = '7%'
+        header.style.height = '15%'
         nom.style.fontSize = '5vw'
       }
-    } else if (windowWidth >= 900) {
+    } else if (windowWidth > 900) {
       if (scrollTop > 0) {
         header.style.height = '5%'
         nom.style.fontSize = '2vw'
        }  else {
-         header.style.height = '4%'
+         header.style.height = '10%'
          nom.style.fontSize = '5vw'
        }
-    }
+     }
     
   })
 
