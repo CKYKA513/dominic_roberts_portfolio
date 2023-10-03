@@ -499,7 +499,7 @@ footer {
 
 
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1000px) {
     body {
         font-size: 4vw;
     }
@@ -525,6 +525,7 @@ footer {
     }
     main {
         top: 15vw;
+        padding-bottom: 6vw;
         .contactContent {
             .titleFlexContainer {
                 h2 {
@@ -567,7 +568,24 @@ footer {
 
 @media screen and (max-width: 500px) {
     header {
+        .accueilLink {
+            display: none;
+        }
+        display: block;
+        position: fixed;
+        background-color: var(--noir);
+        width: 100%;
+        color: var(--blanc);
+        z-index: 2;
         height: 20vw;
+        box-shadow: none;
+        .menuHamburger {
+            display: block;
+            background-color: rgba(0, 0, 0, 0);
+        }
+        .menu {
+            display: none;
+        }
     }
     main {
         top: 20vw;
