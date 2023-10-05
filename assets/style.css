@@ -35,10 +35,14 @@ header {
   z-index: 2;
   transition: height 0.3s ease;
   box-shadow: 0px 1px 20px var(--deepNoir);
+  height: 20%;
+}
+header .headerFlexContainer {
+  height: 100%;
+  display: flex;
 }
 header .menu {
   display: block;
-  position: absolute;
   width: 50%;
 }
 header .menu .menuFlexContainer {
@@ -82,20 +86,16 @@ header .menu .menuFlexContainer .contact a:hover {
     height: 0%;
   }
   to {
-    height: 675%;
+    height: 92%;
   }
+}
+header .accueilLink {
+  font-size: 2vw;
+  overflow: hidden;
 }
 header a {
   text-decoration: none;
   color: var(--blanc);
-}
-header .nom {
-  position: relative;
-  left: 50vw;
-  margin: 1vh 5% 0 0;
-  font-size: 5vw;
-  margin-top: 0px;
-  transition: font-size 0.3s ease;
 }
 header .nom:hover {
   color: var(--violet);
