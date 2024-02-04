@@ -5,12 +5,14 @@ window.addEventListener("load", () => {
   let header = document.querySelector(".header")
   let menu = document.querySelector('.menu')
   let menuHamburger = document.querySelector('.menuHamburger')
+  let headerHeight = '20%';
+  console.log(headerHeight)
   if (windowWidth > 1000) {
-    windowOver900()
+    windowOver1000(headerHeight)
   }
 })
 
-function windowOver900() {
+function windowOver1000(height) {
   window.addEventListener("scroll", () => {
     let header = document.querySelector(".header")
     let scrollTop = window.pageYOffset || document.documentElement.scrollTop
@@ -18,17 +20,19 @@ function windowOver900() {
     let windowWidth = window.innerWidth;
     let menu = document.querySelector(".menu")
     
-  
+
+
     if (windowWidth >= 1500) {
       if (scrollTop > 0) {
         header.style.height = '5%'
         nom.style.fontSize = '2vw'
       } else {
+        
         header.style.height = '20%'
         nom.style.fontSize = '5vw'
         // menu.style.transform = "translateY(50px)" 
       }
-    } else if (windowWidth >= 1200) {
+      } else if (windowWidth >= 1200) {
       if (scrollTop > 0) {
         header.style.height = '5%'
         nom.style.fontSize = '2vw'
@@ -47,11 +51,6 @@ function windowOver900() {
      }
     
   })
-}
-
-function windowUnder900() {
-  console.log('yo?')
-  header.style.height = '10vw'
 }
 
 // drop down menu
